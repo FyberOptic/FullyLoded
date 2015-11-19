@@ -102,7 +102,7 @@ public class FullyLoded {
 		if (entity.isSneaking()) return result;
 		
 		Block b = state.getBlock();
-		if (stack.getItem().canHarvestBlock(b) && blocks.contains(b) && entity instanceof EntityPlayer) {
+		if (stack.getItem().canHarvestBlock(state) && blocks.contains(b) && entity instanceof EntityPlayer) {
 			destroyNeighbors(b, world, pos, (EntityPlayer)entity);			
 		}		
 		
