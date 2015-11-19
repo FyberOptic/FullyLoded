@@ -45,7 +45,7 @@ public class FullyLoded {
 		
 		String defaultOres = "iron_ore, gold_ore, coal_ore, lapis_ore, diamond_ore, redstone_ore, lit_redstone_ore, emerald_ore, quartz_ore";
 		
-		String list = config.get(ConfigFile.key("general", "ores", defaultOres, "List of block names to mine by the vein."));
+		String list = config.get(ConfigFile.key("general", "ores", defaultOres, "List of block names to mine by the vein.\n\nMetadata can be provided by using a colon followed by the value.\ne.g. stone:1 for granite, stone:3 for diorite, etc"));
 		maxBlocks = config.get(ConfigFile.key("general", "maxBlocks", 100, "Maximum number of blocks that can be mined at once."));
 		maxHorizontal = config.get(ConfigFile.key("general", "maxHorizontal", 10, "Maximum horizontal distance to search the vein from the block mined."));
 		maxVertical = config.get(ConfigFile.key("general", "maxVertical", 10, "Maximum vertical distance to search the vein from the block mined."));

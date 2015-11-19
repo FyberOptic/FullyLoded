@@ -21,21 +21,21 @@ meddle {
 }
 
 dynamicmappings {
-    version = "019"
-    location = "../dynamicmappings/bin/"
+    version = "021"
+    //location = "../dynamicmappings/bin/"
 }
 
 meddleapi {
-    version = "1.0.5"
+    version = "1.0.6"
 }
 
 minecraft {
-    version = '15w44b'
+    version = '15w47b'
 }
 
 jar {
     baseName = 'fullyloded'
-    version = '1.0'
+    version = '1.0.1'
     
     manifest {
 		attributes('TweakClass' : 'net.fybertech.fullyloded.FullyLodedTweak')
