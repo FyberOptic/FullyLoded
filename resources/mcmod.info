@@ -1,0 +1,20 @@
+{
+  "modinfoversion": 2,
+  "modlist": [{
+    "modid": "fullyloded",
+    "name": "FullyLoded",
+    "description": "Allows you to mine an entire vein of ore at once.",
+    "version": "1.0.2",
+    "mcversion": "1.4.7",
+    "url": "http://www.fybertech.net/minecraft/",
+    "authors": [ "FyberOptic"],
+    "credits": "FyberOptic",
+    "logoFile": "",
+    "screenshots": [ ],
+    "parent": "",
+    "requiredMods": [ "Forge" ],
+    "dependencies": [ "Forge" ],
+    "dependants": [  ],
+    "useDependencyInformation": "true"
+  }]
+}
