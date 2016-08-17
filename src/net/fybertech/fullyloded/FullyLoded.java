@@ -146,7 +146,7 @@ public class FullyLoded {
 		return vein;
 	}
 	
-	public static boolean destroyBlock(IBlockState state, World world, BlockPos newPos, EntityPlayer player) {
+	public static boolean destroyBlock(IBlockState state, World world, BlockPos newPos, EntityPlayer player) {		
 		if (player.getHeldMainHandItem() == null || player.getHeldMainHandItem().stackSize < 1) return false;				
 		
 		IBlockState upState = world.getBlockState(newPos);
@@ -192,7 +192,8 @@ public class FullyLoded {
 		if (stack.getItem().canHarvestBlock(state) && blocks.contains(state) && entity instanceof EntityPlayer) {
 			HashSet<BlockPos> vein = findVein(state, world, pos, (EntityPlayer)entity);
 			for (BlockPos currentPos : vein) {
-				if (!destroyBlock(state, world, currentPos, (EntityPlayer)entity))
+				// TODO - Skip if currentPos = pos; the additional code submitted broke it
+                if (!destroyBlock(state, world, currentPos, (EntityPlayer)entity))
 					break;
 			}
 		}
