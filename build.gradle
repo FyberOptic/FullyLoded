@@ -3,15 +3,6 @@ apply from: 'meddle.gradle'
 sourceCompatibility = '1.7'
 targetCompatibility = '1.7'
 
-sourceSets {
-	main {
-		java {
-			srcDirs = ['src']
-		}
-	}
-}
-
-
 greddle {
     cacheDir = 'cache'
 }
@@ -21,7 +12,7 @@ meddle {
 }
 
 dynamicmappings {
-    version = "021"
+    version = "026"
     //location = "../dynamicmappings/bin/"
 }
 
@@ -30,12 +21,12 @@ meddleapi {
 }
 
 minecraft {
-    version = '15w47b'
+    version = '16w32b'
 }
 
 jar {
     baseName = 'fullyloded'
-    version = '1.0.1'
+    version = '1.0.2'
     
     manifest {
 		attributes('TweakClass' : 'net.fybertech.fullyloded.FullyLodedTweak')

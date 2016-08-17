@@ -147,7 +147,9 @@ public class FullyLoded {
 	}
 	
 	public static boolean destroyBlock(IBlockState state, World world, BlockPos newPos, EntityPlayer player) {		
-		if (player.getHeldMainHandItem() == null || player.getHeldMainHandItem().stackSize < 1) return false;				
+		// TODO - Change stackSize to getStackSize() later.  Mapping doesn't exist currently for 16w32b, so
+		//        we'll use an access transformer for now.
+		if (player.getHeldMainHandItem() == null || player.getHeldMainHandItem().stackSize < 1) return false;		
 		
 		IBlockState upState = world.getBlockState(newPos);
 		if (upState == null) return false;				
