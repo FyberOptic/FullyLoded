@@ -1,6 +1,6 @@
 # FullyLoded
 
-A Minecraft 1.9 mod which allows you to mine entire veins of ore at once.
+A Minecraft 1.11 mod which allows you to mine entire veins of ore at once.
 
 Requires the [Meddle](https://github.com/FyberOptic/Meddle) mod loader, with the [DynamicMappings](https://github.com/FyberOptic/DynamicMappings) and [MeddleAPI](https://github.com/FyberOptic/MeddleAPI) mods installed.
 
