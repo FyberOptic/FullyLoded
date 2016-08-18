@@ -7,7 +7,7 @@ import net.fybertech.meddle.MeddleMod;
 import net.minecraft.launchwrapper.ITweaker;
 import net.minecraft.launchwrapper.LaunchClassLoader;
 
-@MeddleMod(id="fullyloded", name="Fully Loded", author="FyberOptic", version="1.0.2", depends={"dynamicmappings", "meddleapi"})
+@MeddleMod(id="fullyloded", name="Fully Loded", author="FyberOptic", version="1.0.3", depends={"dynamicmappings", "meddleapi"})
 public class FullyLodedTweak implements ITweaker 
 {
 

@@ -147,9 +147,7 @@ public class FullyLoded {
 	}
 	
 	public static boolean destroyBlock(IBlockState state, World world, BlockPos newPos, EntityPlayer player) {		
-		// TODO - Change stackSize to getStackSize() later.  Mapping doesn't exist currently for 16w32b, so
-		//        we'll use an access transformer for now.
-		if (player.getHeldMainHandItem() == null || player.getHeldMainHandItem().stackSize < 1) return false;		
+		if (player.getHeldMainHandItem() == null || player.getHeldMainHandItem().getStackSize() < 1) return false;		
 		
 		IBlockState upState = world.getBlockState(newPos);
 		if (upState == null) return false;				
@@ -160,8 +158,8 @@ public class FullyLoded {
 			world.setBlockState(newPos, Blocks.air.getDefaultState(), 3);					
 			player.getHeldMainHandItem().damageItem(1, player);
 			
-			if (player.getHeldMainHandItem().stackSize < 1) {							
-				player.setHeldItem(MainOrOffHand.MAIN_HAND, (ItemStack)null);
+			if (player.getHeldMainHandItem().getStackSize() < 1) {							
+				player.setHeldItem(MainOrOffHand.MAIN_HAND, ItemStack.NULL_STACK);
 			}
 			
 			if (!world.isRemote) block.harvestBlock(world, player, newPos, upState, null, player.getHeldMainHandItem() == null ? null : player.getHeldMainHandItem().copy());
